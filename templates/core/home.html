@@ -1,65 +1,83 @@
 {% extends "base.html" %}
 
-{% block title %}Nooxial – Aprende sin límites{% endblock %}
+{% block title %}Transol S.R.L. – Al servicio de las grandes empresas{% endblock %}
 
 {% block body %}
 
 <!-- ─── HERO ──────────────────────────────────────────────────── -->
-<section class="bg-brand-300 px-6 py-20 md:py-28">
-  <div class="max-w-5xl mx-auto text-center">
-    <h1 class="text-5xl md:text-7xl font-black text-gray-900 leading-tight uppercase tracking-tight">
-      APRENDE HOY<br />LIDERA EL FUTURO
+<section class="relative bg-gray-900 px-6 py-24 md:py-32 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-brand-900 via-gray-900 to-gray-900 opacity-90"></div>
+  <div class="relative max-w-5xl mx-auto text-center">
+    <span class="inline-block bg-brand-400/10 text-brand-300 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full border border-brand-400/20">
+      Desde 1991 · Más de 30 años de trayectoria
+    </span>
+    <h1 class="mt-6 text-4xl md:text-6xl font-black text-white leading-tight uppercase tracking-tight">
+      Al servicio de<br />las grandes empresas
     </h1>
-    <p class="mt-6 text-lg md:text-xl text-gray-800 max-w-2xl mx-auto">
-      Cursos online creados por expertos. Aprende a tu ritmo,
-      desde cualquier lugar. Sin suscripciones.<sup>1</sup>
+    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+      Transporte y logística de sustancias peligrosas, gas licuado de petróleo
+      y gases del aire, a nivel nacional e internacional.
     </p>
     <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-      {% if user.is_authenticated %}
-      <a href="{% url 'courses:dashboard' %}"
-         class="bg-gray-900 text-white text-base font-semibold px-8 py-4 rounded-full hover:bg-gray-700 transition-colors">
-        Ir al Dashboard
+      <a href="#servicios"
+         class="bg-brand-400 text-gray-900 text-base font-bold px-8 py-4 rounded-full hover:bg-brand-300 transition-colors">
+        Nuestros servicios
       </a>
-      {% else %}
-      <a href="{% url 'accounts:register' %}"
-         class="bg-gray-900 text-white text-base font-semibold px-8 py-4 rounded-full hover:bg-gray-700 transition-colors">
-        Explorar cursos
-      </a>
-      {% endif %}
-      <a href="#como-funciona"
-         class="bg-white/60 text-gray-900 text-base font-semibold px-8 py-4 rounded-full hover:bg-white transition-colors">
-        ¿Cómo funciona?
+      <a href="#capacitacion"
+         class="bg-white/10 text-white text-base font-semibold px-8 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-colors">
+        Portal de Capacitación
       </a>
     </div>
   </div>
 </section>
 
 <!-- ─── STATS BAR ─────────────────────────────────────────────── -->
-<section class="bg-gray-900 text-white py-10 px-6">
+<section class="bg-gray-900 text-white py-10 px-6 border-t border-white/10">
   <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
     <div>
-      <p class="text-3xl font-black text-brand-300">{{ stats.courses_count }}</p>
-      <p class="text-sm text-gray-400 mt-1">Cursos disponibles</p>
+      <p class="text-3xl font-black text-brand-300">+30</p>
+      <p class="text-sm text-gray-400 mt-1">Años de experiencia</p>
     </div>
     <div>
-      <p class="text-3xl font-black text-brand-300">{{ stats.students_count }}</p>
-      <p class="text-sm text-gray-400 mt-1">Estudiantes registrados</p>
+      <p class="text-3xl font-black text-brand-300">4</p>
+      <p class="text-sm text-gray-400 mt-1">Normas ISO certificadas</p>
     </div>
     <div>
-      <p class="text-3xl font-black text-brand-300">{{ stats.enrollments_count }}</p>
-      <p class="text-sm text-gray-400 mt-1">Inscripciones activas</p>
+      <p class="text-3xl font-black text-brand-300">+25</p>
+      <p class="text-sm text-gray-400 mt-1">Empresas líderes atendidas</p>
     </div>
     <div>
-      <p class="text-3xl font-black text-brand-300">{{ stats.instructors_count }}</p>
-      <p class="text-sm text-gray-400 mt-1">Instructores</p>
+      <p class="text-3xl font-black text-brand-300">4</p>
+      <p class="text-sm text-gray-400 mt-1">Países de alcance regional</p>
     </div>
   </div>
 </section>
 
-<!-- ─── FEATURES ──────────────────────────────────────────────── -->
-<section id="como-funciona" class="py-20 px-6">
+<!-- ─── NOSOTROS ──────────────────────────────────────────────── -->
+<section id="nosotros" class="py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <p class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-3 text-center">Quiénes somos</p>
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">Transol S.R.L.</h2>
+    <p class="text-gray-600 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+      Somos una empresa de transporte que inicia sus actividades en octubre de 1991.
+      Contamos con más de 30 años de experiencia en logística y distribución de sustancias
+      peligrosas y generales, desarrollándonos casi con exclusividad en el mercado del
+      gas licuado de petróleo y los gases del aire, tanto en el territorio nacional
+      como en el internacional.
+    </p>
+    <p class="text-gray-500 mt-4 leading-relaxed text-center max-w-3xl mx-auto">
+      A través de los años aspiramos a ser líderes en el mercado, privilegiando en
+      nuestro accionar la calidad de servicio, la seguridad y el cuidado por el
+      medio ambiente — un compromiso que resume nuestro lema:
+      <span class="font-semibold text-gray-900">“Al servicio de las grandes empresas”.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ─── SERVICIOS ─────────────────────────────────────────────── -->
+<section id="servicios" class="py-20 px-6 bg-gray-50">
   <div class="max-w-6xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-14">¿Por qué elegir Nooxial?</h2>
+    <h2 class="text-3xl font-bold text-center mb-14">Nuestros servicios</h2>
     <div class="grid md:grid-cols-3 gap-6">
 
       <!-- Card 1 -->
@@ -67,28 +85,28 @@
         <div class="w-12 h-12 bg-brand-300 rounded-2xl flex items-center justify-center mb-6">
           <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M13 10V3L4 14h7v7l9-11h-7z" />
+              d="M3 13h13V6H3v7zm0 0v4a1 1 0 001 1h1m11-5h4l3 4v4a1 1 0 01-1 1h-1m-13 0a2 2 0 104 0m-4 0a2 2 0 114 0m9 0a2 2 0 104 0m-4 0a2 2 0 114 0" />
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-brand-300 mb-3">Aprende a tu ritmo</h3>
+        <h3 class="text-xl font-bold text-brand-300 mb-3">Cargas peligrosas</h3>
         <p class="text-gray-400 text-sm leading-relaxed">
-          Accede a los contenidos cuando quieras, desde cualquier dispositivo.
-          Pausa, rebobina y repite tantas veces como necesites.
+          Transporte y distribución de gas licuado de petróleo (GLP) y gases
+          industriales, cumpliendo con los más altos estándares de seguridad.
         </p>
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-gray-50 rounded-3xl p-8 border border-gray-100">
+      <div class="bg-white rounded-3xl p-8 border border-gray-100">
         <div class="w-12 h-12 bg-brand-300 rounded-2xl flex items-center justify-center mb-6">
           <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </div>
-        <h3 class="text-xl font-bold mb-3">Certificados reales</h3>
+        <h3 class="text-xl font-bold mb-3">Alcance regional</h3>
         <p class="text-gray-500 text-sm leading-relaxed">
-          Obtén certificados reconocidos por empresas líderes al completar
-          cada curso. Compártelos en LinkedIn con un clic.
+          Operamos en Argentina y países limítrofes: Chile, Paraguay y Bolivia,
+          para las principales petroleras y gasíferas de la región.
         </p>
       </div>
 
@@ -97,16 +115,95 @@
         <div class="w-12 h-12 bg-brand-300 rounded-2xl flex items-center justify-center mb-6">
           <svg class="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
           </svg>
         </div>
-        <h3 class="text-xl font-bold mb-3">Comunidad activa</h3>
+        <h3 class="text-xl font-bold mb-3">Seguridad y calidad</h3>
         <p class="text-gray-500 text-sm leading-relaxed">
-          Únete a miles de estudiantes. Foros, sesiones en vivo con instructores
-          y grupos de estudio para no aprender solo.
+          Gestión de calidad ISO 9001, seguridad vial ISO 39001, medio ambiente
+          ISO 14001 y seguridad y salud ISO 45001, auditadas por Bureau Veritas.
         </p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- ─── CERTIFICACIONES ISO ───────────────────────────────────── -->
+<section class="py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-10">
+      <p class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-2">Calidad certificada</p>
+      <h2 class="text-2xl md:text-3xl font-bold">Normas ISO</h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="text-center bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <p class="text-2xl font-black text-brand-600">ISO 9001</p>
+        <p class="text-xs text-gray-500 mt-1">Gestión de calidad · desde 2001</p>
+      </div>
+      <div class="text-center bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <p class="text-2xl font-black text-brand-600">ISO 39001</p>
+        <p class="text-xs text-gray-500 mt-1">Seguridad vial · desde 2017</p>
+      </div>
+      <div class="text-center bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <p class="text-2xl font-black text-brand-600">ISO 14001</p>
+        <p class="text-xs text-gray-500 mt-1">Gestión ambiental · desde 2019</p>
+      </div>
+      <div class="text-center bg-gray-50 rounded-2xl p-6 border border-gray-100">
+        <p class="text-2xl font-black text-brand-600">ISO 45001</p>
+        <p class="text-xs text-gray-500 mt-1">Seguridad y salud · desde 2019</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CLIENTES ──────────────────────────────────────────────── -->
+<section class="py-16 px-6 bg-gray-50 border-y border-gray-100">
+  <div class="max-w-6xl mx-auto text-center">
+    <p class="text-xs font-bold text-gray-500 uppercase tracking-widest mb-6">Empresas que confían en nosotros</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">SHELL</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">YPF</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">AXION ENERGY</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">TOTAL ESPECIALIDADES</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">PRAXAIR</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">LINDE GROUP</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">RAIZEN</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">ITALGAS</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">LITORAL GAS</span>
+      <span class="bg-white border border-gray-200 rounded-full px-5 py-2 text-sm font-bold text-gray-500 tracking-wide">REFINOR</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CAPACITACIÓN (LMS) ─────────────────────────────────────── -->
+<section id="capacitacion" class="py-20 px-6">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-3">Portal de Capacitación</p>
+      <h2 class="text-3xl md:text-4xl font-bold">Formación continua para nuestro equipo</h2>
+      <p class="mt-4 text-gray-500 max-w-2xl mx-auto">
+        Cursos de seguridad vial, manejo de sustancias peligrosas y procesos internos,
+        pensados para choferes, operarios y personal administrativo de Transol.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center mb-14">
+      <div>
+        <p class="text-3xl font-black text-brand-600">{{ stats.courses_count }}</p>
+        <p class="text-sm text-gray-500 mt-1">Cursos disponibles</p>
+      </div>
+      <div>
+        <p class="text-3xl font-black text-brand-600">{{ stats.students_count }}</p>
+        <p class="text-sm text-gray-500 mt-1">Usuarios registrados</p>
+      </div>
+      <div>
+        <p class="text-3xl font-black text-brand-600">{{ stats.enrollments_count }}</p>
+        <p class="text-sm text-gray-500 mt-1">Inscripciones activas</p>
+      </div>
+      <div>
+        <p class="text-3xl font-black text-brand-600">{{ stats.instructors_count }}</p>
+        <p class="text-sm text-gray-500 mt-1">Instructores</p>
+      </div>
     </div>
   </div>
 </section>
@@ -116,13 +213,13 @@
   <div class="max-w-6xl mx-auto">
     <div class="flex items-end justify-between mb-12">
       <h2 class="text-3xl font-bold">Explora por categoría</h2>
-      <a href="#" class="text-sm font-semibold underline underline-offset-4 text-gray-600 hover:text-gray-900">
+      <a href="{% url 'courses:course_list' %}" class="text-sm font-semibold underline underline-offset-4 text-gray-600 hover:text-gray-900">
         Ver todas
       </a>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
       {% for cat in categories %}
-      <a href="#"
+      <a href="{% url 'courses:course_list' %}?categoria={{ cat.slug }}"
          class="group bg-white rounded-2xl p-6 border border-gray-100 hover:border-brand-300 hover:shadow-sm transition-all">
         <span class="text-3xl">{{ cat.icon }}</span>
         <p class="mt-3 font-semibold text-gray-900 group-hover:text-brand-600">{{ cat.name }}</p>
@@ -254,19 +351,26 @@
 </section>
 
 <!-- ─── CTA BANNER ────────────────────────────────────────────── -->
-<section id="nosotros" class="py-20 px-6 bg-gray-900 text-white">
+<section class="py-20 px-6 bg-gray-900 text-white">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-4xl md:text-5xl font-black leading-tight">
-      Comienza gratis.<br />
-      <span class="text-brand-300">Sin tarjeta de crédito.</span>
+      ¿Querés sumarte<br />
+      <span class="text-brand-300">al equipo Transol?</span>
     </h2>
     <p class="mt-5 text-gray-400 text-lg">
-      Crea tu cuenta en segundos y empieza a aprender hoy mismo.
+      Accedé al portal de capacitación con la cuenta que te proporcionó la empresa
+      o dejanos tu currículum para futuras búsquedas laborales.
     </p>
-    <a href="{% url 'accounts:register' %}"
-       class="mt-8 inline-block bg-brand-300 text-gray-900 font-bold text-base px-10 py-4 rounded-full hover:bg-brand-400 transition-colors">
-      Crear cuenta gratis
-    </a>
+    <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="{% url 'accounts:login' %}"
+         class="inline-block bg-brand-300 text-gray-900 font-bold text-base px-10 py-4 rounded-full hover:bg-brand-400 transition-colors">
+        Iniciar sesión
+      </a>
+      <a href="https://transol.odoo.com/jobs" target="_blank" rel="noopener"
+         class="inline-block bg-white/10 text-white font-bold text-base px-10 py-4 rounded-full border border-white/20 hover:bg-white/20 transition-colors">
+        Dejar mi CV
+      </a>
+    </div>
   </div>
 </section>
 
@@ -280,9 +384,29 @@
         <p class="text-xs font-bold text-brand-600 uppercase tracking-widest mb-3">Contacto</p>
         <h2 class="text-4xl font-black text-gray-900 leading-tight">¿Hablamos?</h2>
         <p class="mt-4 text-gray-500 text-lg leading-relaxed">
-          Si tienes preguntas, quieres una demo o necesitas más información, escríbenos y te responderemos en menos de 24 horas.
+          Si tienes preguntas comerciales, querés cotizar un servicio o necesitás más
+          información, escribinos y te responderemos a la brevedad.
         </p>
         <div class="mt-8 space-y-4 text-sm text-gray-600">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-brand-50 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+            </div>
+            <span><a href="tel:+541140029999" class="font-semibold text-gray-900 hover:text-brand-600">+54 11 4002-9999</a> · Lun a Vie 8-17 hs, Sáb 8-13 hs</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-brand-50 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
+            </div>
+            <span>Av. Guillermo Hudson 3254 – Bosques, Fcio. Varela – CP 1889</span>
+          </div>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-2xl bg-brand-50 flex items-center justify-center flex-shrink-0">
               <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -290,17 +414,12 @@
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
             </div>
-            <span>Respondemos en menos de 24 h</span>
+            <span><a href="mailto:info@transol.com.ar" class="font-semibold text-gray-900 hover:text-brand-600">info@transol.com.ar</a></span>
           </div>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-2xl bg-brand-50 flex items-center justify-center flex-shrink-0">
-              <svg class="w-5 h-5 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-              </svg>
-            </div>
-            <span>Tus datos están seguros con nosotros</span>
-          </div>
+        </div>
+        <div class="mt-6 p-4 rounded-2xl bg-red-50 border border-red-100 text-sm text-red-700">
+          <p class="font-bold">Teléfono de emergencias / siniestros viales</p>
+          <a href="https://wa.me/5491164005135" class="font-semibold underline">1164005135</a>
         </div>
       </div>
 
